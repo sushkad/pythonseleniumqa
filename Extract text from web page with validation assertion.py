@@ -1,5 +1,3 @@
-
-
 import time
 from itertools import dropwhile
 
@@ -12,21 +10,10 @@ from selenium.webdriver.support.ui import Select
 
 driver = webdriver.Chrome()
 #driver.get("http://localhost:3000/login")
-driver.get("https://rahulshettyacademy.com/angularpractice/")
+driver.get("https://rahulshettyacademy.com/client/")
 
-#driver.maximize_window()
 print(driver.title)
 print(driver.current_url)
 
-time.sleep(5)
-
-# static dropdown
-dropdown = Select(driver.find_element(By.ID,"exampleFormControlSelect1"))
-dropdown.select_by_visible_text("Female")
-dropdown.select_by_index(0)
-
-
-time.sleep(5)
-driver.quit()
-
+driver.find_element(By.LINK_TEXT,"Forgot password?").click()
 
