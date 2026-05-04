@@ -17,3 +17,11 @@ print(driver.current_url)
 
 driver.find_element(By.LINK_TEXT,"Forgot password?").click()
 
+driver.find_element(By.CSS_SELECTOR,"input[placeholder='Enter your email address']").send_keys("sushant@gmail.com")
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR,"#userPassword").send_keys("Admin@1234")
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR,"#confirmPassword").send_keys("Admin@1234")
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR,"button[type='submit']").send_keys("Admin@1234")
+
