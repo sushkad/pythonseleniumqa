@@ -27,4 +27,6 @@ for country in countries:
         break
 
 
-print(driver.find_element(By.ID,"autosuggest")).__getattribute__("value")
+# print(driver.find_element(By.ID,"autosuggest")).__getattribute__("value") == "India"
+assert print(driver.find_element(By.ID,"autosuggest")).__getattribute__("value") == "India"
+
